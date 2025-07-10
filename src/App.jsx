@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App-container">
     <h1>MERN Frontend</h1>
-    <Home/>
+    {/* <Home/> */}
     <Register/>
     
     <h3>This is footer</h3>

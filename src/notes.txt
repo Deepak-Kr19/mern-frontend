@@ -1,0 +1,8 @@
+let score = [20,40,50];
+score = [...score, 60];
+console.log(score);
+
+************************************************
+let student = {name:"john", age:21}
+student = {...student, city:"abc"}
+console.log(student);

@@ -35,8 +35,6 @@
             setMessage("Well played! Keep going!");
 
         }
-        
-        
 
     };
 
