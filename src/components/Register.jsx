@@ -6,7 +6,7 @@ import './Register.css';
 export default function Register() {
     const [user, setUser] = useState({});
     const [error, setError] = useState("");
-    const handleSubmit = async () => {
+     const handleSubmit = async () => {
     try {
       const url = "http://localhost:8080/api/users/register";
       const result = await axios.post(url, user);
