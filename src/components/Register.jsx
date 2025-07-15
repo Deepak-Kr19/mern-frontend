@@ -1,14 +1,17 @@
 import { useState } from "react";
 import axios from "axios";
 import './Register.css';
+import { Link } from "react-router-dom";
 // import { useRef } from "react";
 
 export default function Register() {
     const [user, setUser] = useState({});
     const [error, setError] = useState("");
+    const API_URL = import.meta.env.VITE_API_URL;
      const handleSubmit = async () => {
     try {
-      const url = "http://localhost:8080/api/users/register";
+      const url = `${API_URL}/api/users/register`;
+      
       const result = await axios.post(url, user);
       setError("Data saved successfully");
     } catch (err) {
@@ -35,6 +38,8 @@ export default function Register() {
                 <input type="password" onChange={(e) => setUser({ ...user, password: e.target.value})} placeholder="Enter password: " />
             </p>
             <button onClick={handleSubmit}>Submit</button>
+            <p>Already have an account?</p>
+            <Link to="/login">Login</Link>
             </div>
             
 
