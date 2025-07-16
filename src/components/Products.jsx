@@ -70,7 +70,7 @@ export default function Products() {
   };
 
   const handleEdit = (product) => {
-    setEditId(user._id);
+    setEditId(product._id);
     setForm({
       ...form,
       productName: product.productName,
