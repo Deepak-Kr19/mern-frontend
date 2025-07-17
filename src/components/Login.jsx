@@ -1,3 +1,4 @@
+import "./Login.css";
 import React, { useContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -21,9 +22,10 @@ export default function Login() {
     }
   };
   return (
-    <div>
+    <div className="login-container">
+      <div className="Login-Box">
       <h2>Login</h2>
-      {error}
+      {error && <p>{error}</p>}
       <p>
         <input
           type="text"
@@ -43,6 +45,7 @@ export default function Login() {
       </p>
       <hr />
       <Link to="/register">Create Account</Link>
+      </div>
     </div>
   );
 }
