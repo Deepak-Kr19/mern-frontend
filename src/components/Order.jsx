@@ -33,10 +33,12 @@ export default function Order() {
             <p>Status:{order.status}</p>
             <table border="1">
               <thead>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                </tr>
               </thead>
               {order.items.map((item) => (
                 <tbody key={item._id}>
@@ -44,7 +46,7 @@ export default function Order() {
                     <td>{item.productName}</td>
                     <td>{item.price}</td>
                     <td>{item.qty}</td>
-                     <td>{item.qty*item.price}</td>
+                    <td>{item.qty * item.price}</td>
                   </tr>
                 </tbody>
               ))}

@@ -3,8 +3,6 @@ import "./Register.css";
 import { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import axios from "axios";
-import React from "react";
-
 export default function Register() {
   const [user, setUser] = useState({});
   const [error, setError] = useState();
