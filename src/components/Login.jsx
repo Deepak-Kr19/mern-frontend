@@ -22,7 +22,7 @@ export default function Login() {
     }
   };
   return (
-    <div className="login-container">
+    <div className="Login-Container">
       <div className="Login-Box">
       <h2>Login</h2>
       {error && <p>{error}</p>}
